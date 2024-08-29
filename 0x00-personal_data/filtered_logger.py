@@ -1,16 +1,16 @@
+
 #!/usr/bin/env python3
-"""
-Personal Data
+""" 0x05. Personal data
 """
 
 import logging
 import os
 import re
-from typing import List
 import mysql.connector
+from typing import List
 
 
-PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password')
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 
 
 def filter_datum(fields: List[str], redaction: str, message: str,
@@ -85,3 +85,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
