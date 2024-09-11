@@ -1,7 +1,5 @@
 
 #!/usr/bin/env python3
-""" Flask class
-"""
 
 from auth import Auth
 from flask import Flask, jsonify, request, abort, redirect
@@ -10,11 +8,11 @@ AUTH = Auth()
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'], strict_slashes=False)
+@app.route('/', methods=['GET'])
 def welcome() -> str:
     """ GET /
     Return:
-      - welcome
+        - welcome
     """
     return jsonify({"message": "Bienvenue"}), 200
 
@@ -23,7 +21,7 @@ def welcome() -> str:
 def user() -> str:
     """ POST /users
     Return:
-      - message
+        - message
     """
     email = request.form.get('email')
     password = request.form.get('password')
@@ -114,5 +112,5 @@ def update_password() -> str:
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port="5000")
+    app.run(host="0.0.0.0", port=5000)
 
