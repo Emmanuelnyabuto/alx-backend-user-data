@@ -1,7 +1,5 @@
-
 #!/usr/bin/env python3
-"""
-User Module
+""" User module
 """
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,7 +10,7 @@ Base = declarative_base()
 
 class User(Base):
     """
-    User class
+    User class.
     """
 
     __tablename__ = 'users'
@@ -25,7 +23,6 @@ class User(Base):
 
     def __repr__(self):
         """
-        String Rep
+        String rep.
         """
         return f"User: id={self.id}"
-
